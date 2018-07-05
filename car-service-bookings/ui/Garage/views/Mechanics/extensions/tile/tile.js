@@ -13,6 +13,7 @@ var dao = require('car-service-bookings/data/dao/Garage/Mechanics.js')
 exports.getTile = function() {
 	return {
 		'name': 'Mechanics',
+		'group': 'Garage',
 		'icon': 'wrench',
 		'location': '/services/v3/web/car-service-bookings/ui/Garage/index.html',
 		'count': dao.count(),

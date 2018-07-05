@@ -1031,13 +1031,13 @@
                 "type": "REPORT",
                 "title": "Brands",
                 "tooltip": "Brands",
-                "icon": "file-o",
+                "icon": "pie-chart",
                 "menuKey": "brands",
                 "menuLabel": "Brands",
                 "menuIndex": 100,
                 "layoutType": "REPORT_PIE",
                 "perspectiveName": "Reports",
-                "perspectiveIcon": "files-o",
+                "perspectiveIcon": "area-chart",
                 "perspectiveOrder": "100",
                 "properties": [
                     {
@@ -1103,18 +1103,18 @@
             {
                 "name": "ReportListBrandModels",
                 "dataName": "CAR_SERVICE_REPORT_LIST_BRAND_MODELS",
-                "dataCount": "SELECT COUNT(*) FROM CAR_SERVICE_REPORT_LIST_BRAND_MODELS",
+                "dataCount": "SELECT COUNT(*) AS COUNT FROM CAR_SERVICE_REPORT_LIST_BRAND_MODELS",
                 "dataQuery": "SELECT BRAND_NAME, MODEL_NAME \nFROM CAR_SERVICE_BRANDS, CAR_SERVICE_MODELS\nWHERE BRAND_ID = MODEL_BRAND_ID\nORDER BY BRAND_NAME, MODEL_NAME",
                 "type": "REPORT",
                 "title": "Models",
                 "tooltip": "Models",
-                "icon": "file-o",
+                "icon": "table",
                 "menuKey": "reportlistbrandmodels",
                 "menuLabel": "Models",
                 "menuIndex": 100,
                 "layoutType": "REPORT_TABLE",
                 "perspectiveName": "Reports",
-                "perspectiveIcon": "files-o",
+                "perspectiveIcon": "area-chart",
                 "perspectiveOrder": "100",
                 "properties": [
                     {

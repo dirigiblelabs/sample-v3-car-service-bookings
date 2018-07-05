@@ -11,7 +11,7 @@
 exports.getPerspective = function() {
 	return {
 		'name': 'Reports',
-		'image': 'files-o',
+		'image': 'area-chart',
 		'link': '/services/v3/web/car-service-bookings/ui/Reports/index.html',
 		'order': 100,
 	};

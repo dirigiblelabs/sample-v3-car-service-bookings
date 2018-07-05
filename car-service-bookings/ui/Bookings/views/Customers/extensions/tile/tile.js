@@ -13,6 +13,7 @@ var dao = require('car-service-bookings/data/dao/Bookings/Customers.js')
 exports.getTile = function() {
 	return {
 		'name': 'Customers',
+		'group': 'Bookings',
 		'icon': 'users',
 		'location': '/services/v3/web/car-service-bookings/ui/Bookings/index.html',
 		'count': dao.count(),

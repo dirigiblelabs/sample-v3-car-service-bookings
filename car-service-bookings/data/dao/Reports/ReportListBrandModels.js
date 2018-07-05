@@ -20,6 +20,6 @@ exports.list = function(settings) {
 };
 
 exports.count = function() {
-	var resultSet = query.execute("SELECT COUNT(*) FROM CAR_SERVICE_REPORT_LIST_BRAND_MODELS");
+	var resultSet = query.execute("SELECT COUNT(*) AS COUNT FROM CAR_SERVICE_REPORT_LIST_BRAND_MODELS");
 	return resultSet !== null ? resultSet[0].COUNT : 0;
 };

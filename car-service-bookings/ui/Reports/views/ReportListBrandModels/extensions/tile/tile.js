@@ -13,7 +13,8 @@ var dao = require('car-service-bookings/data/dao/Reports/ReportListBrandModels.j
 exports.getTile = function() {
 	return {
 		'name': 'Models',
-		'icon': 'file-o',
+		'group': 'Reports',
+		'icon': 'table',
 		'location': '/services/v3/web/car-service-bookings/ui/Reports/index.html',
 		'count': dao.count(),
 		'order': '100'
