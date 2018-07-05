@@ -1,1 +1,7 @@
-{"guid":"car-service-bookings","repository":{"type":"git","branch":"master","url":"https://github.com/dirigiblelabs/sample-v3-car-service-bookings.git"}}
+{
+	"guid": "car-service-bookings",
+	"repository": {
+		"type": "git",
+		"branch": "master","url":"https://github.com/dirigiblelabs/sample-v3-car-service-bookings.git"
+	}
+}
