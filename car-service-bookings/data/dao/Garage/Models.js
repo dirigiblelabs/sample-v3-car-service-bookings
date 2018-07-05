@@ -16,7 +16,7 @@ var dao = daoApi.create({
 			'required': true
 		}, {
 			'name': 'BrandId',
-			'column': 'MODEL_BRAND',
+			'column': 'MODEL_BRAND_ID',
 			'type': 'INTEGER',
 			'required': true
 		}]

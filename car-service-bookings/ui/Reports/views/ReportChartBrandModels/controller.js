@@ -26,34 +26,31 @@ angular.module('page')
 
 	var api = '/services/v3/js/car-service-bookings/api/Reports/ReportChartBrandModels.js';
 
-	$scope.dateOptions = {
-		startingDay: 1
-	};
-	$scope.dateFormats = ['yyyy/MM/dd', 'dd-MMMM-yyyy', 'dd.MM.yyyy', 'shortDate'];
-	$scope.dateFormat = $scope.dateFormats[0];
-
-	function load() {
+	$scope.load = function() {
 		$http.get(api)
 		.success(function(data) {
-			$scope.data = data;
+			var chartData = [];
+			for (var i = 0; i < data.length; i ++) {
+				chartData.push([data[i].Brand, data[i].Models]);
+			}
+			$.jqplot ('chart', [chartData], {
+				seriesDefaults: {
+					renderer: $.jqplot.PieRenderer, 
+					rendererOptions: {
+						padding: 5,
+						sliceMargin: 5,
+						showDataLabels: true
+					}
+				},
+				legend: {
+					show: true,
+					location: 'e'
+				}
+			});
 		});
-	}
-	load();
-
-	$scope.openInfoDialog = function(entity) {
-		$scope.entity = entity;
-		toggleEntityModal();
 	};
+	$scope.load();
 
-	$scope.close = function() {
-		load();
-		toggleEntityModal();
-	};
+	$messageHub.onEntityRefresh($scope.load);
 
-
-	$messageHub.onEntityRefresh(load);
-
-	function toggleEntityModal() {
-		$('#entityModal').modal('toggle');
-	}
 });

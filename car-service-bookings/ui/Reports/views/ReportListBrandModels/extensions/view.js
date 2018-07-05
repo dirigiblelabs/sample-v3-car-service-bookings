@@ -11,8 +11,8 @@
 exports.getView = function() {
 	return {
 		'id': 'ReportListBrandModels',
-		'name': 'BrandModelReport',
-		'label': 'BrandModelReport',
+		'name': 'Models',
+		'label': 'Models',
 		'factory': 'frame',
 		// 'region': 'center-bottom',
 		'link': '/services/v3/web/car-service-bookings/ui/Reports/views/ReportListBrandModels/index.html'

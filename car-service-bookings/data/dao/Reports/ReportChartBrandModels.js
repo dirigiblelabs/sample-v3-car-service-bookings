@@ -10,7 +10,7 @@ var dao = daoApi.create({
 			'id': true,
 		}, {
 			'name': 'Models',
-			'column': 'MODEL_NAME',
+			'column': 'MODELS_COUNT',
 			'type': 'VARCHAR',
 			'id': true,
 		}]

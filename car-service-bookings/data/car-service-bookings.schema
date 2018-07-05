@@ -33,7 +33,7 @@
                     }, {
                         "type": "INTEGER",
                         "length": 0,
-                        "name": "MODEL_BRAND"
+                        "name": "MODEL_BRAND_ID"
                     }]
             }, {
                 "name": "CAR_SERVICE_CARS",
@@ -186,13 +186,21 @@
                 "name": "CAR_SERVICE_REPORT_CHART_BRAND_MODELS",
                 "type": "VIEW",
                 "columns": [{
-                    "query": "select BRAND_NAME, MODEL_NAME from CAR_BRANDS, CAR_MODELS where BRAND_ID = MODEL_BRAND order by BRAND_NAME, MODEL_NAME"
+                    "query": "SELECT BRAND_NAME, COUNT(*) AS MODELS_COUNT
+FROM CAR_SERVICE_BRANDS, CAR_SERVICE_MODELS
+WHERE BRAND_ID = MODEL_BRAND_ID
+GROUP BY BRAND_NAME
+ORDER BY MODELS_COUNT
+DESC"
                 }]
             }, {
                 "name": "CAR_SERVICE_REPORT_LIST_BRAND_MODELS",
                 "type": "VIEW",
                 "columns": [{
-                    "query": "select BRAND_NAME, count(*) as MODELS_COUNT from CAR_BRANDS, CAR_MODELS where BRAND_ID = MODEL_BRAND group by BRAND_NAME order by MODELS_COUNT desc"
+                    "query": "SELECT BRAND_NAME, MODEL_NAME 
+FROM CAR_SERVICE_BRANDS, CAR_SERVICE_MODELS
+WHERE BRAND_ID = MODEL_BRAND_ID
+ORDER BY BRAND_NAME, MODEL_NAME"
                 }]
             }]
     }
