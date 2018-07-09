@@ -27,7 +27,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="next in data">
+				<tr ng-repeat="next in data" ng-click="selectEntity(next)">
 					<td>{{$index + 1}}</td>
 					<td>{{next.Name}}</td>
 					<td>

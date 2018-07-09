@@ -106,7 +106,9 @@ angular.module('page')
 	$scope.selectEntity = function(entity) {
 		$scope.selectedEntity = entity;
 		$messageHub.messageEntitySelected({
-			'id': entity.Id		})
+			'id': entity.Id,
+			'name': entity.Name
+		});
 	};
 
 	function toggleEntityModal() {

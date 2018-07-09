@@ -25,6 +25,9 @@ angular.module('page')
 		},
 		messageEntityModified: function() {
 			message('modified');
+		},
+		messageEntitySelected: function(id) {
+			message('selected', id);
 		}
 	};
 }])
@@ -133,6 +136,13 @@ angular.module('page')
 		$scope.masterEntityId = event.data.id
 		load();
 	});
+
+	$scope.selectEntity = function(entity) {
+		$messageHub.messageEntitySelected({
+			'id': entity.Id,
+			'name': entity.Name
+		});
+	};
 
 	function toggleEntityModal() {
 		$('#entityModal').modal('toggle');
