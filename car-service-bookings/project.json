@@ -9,5 +9,10 @@
 		"url": "https://github.com/dirigiblelabs/sample-v3-car-service-bookings-data.git",
 		"type": "git",
 		"branch": "master"
+	}, {
+		"guid": "sample-v3-car-service-bookings-extension",
+		"url": "https://github.com/dirigiblelabs/sample-v3-car-service-bookings-extension.git",
+		"type": "git",
+		"branch": "master"
 	}]
 }
